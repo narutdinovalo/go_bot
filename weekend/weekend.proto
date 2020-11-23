@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+// The greeting service definition.
+service Greeter {
+  // Sends a greeting
+  rpc GetByDay(...) returns (Event) {}
+}
+
+message Event {
+  int64 id = 1;
+  string title = 2;
+  google.protobuf.Timestamp date = 3;
+}
